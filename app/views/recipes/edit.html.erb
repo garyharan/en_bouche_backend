@@ -1,10 +1,8 @@
-<h1>Editing recipe</h1>
+<h1 class="text-3xl font-bold mb-4">Editing recipe</h1>
 
 <%= render "form", recipe: @recipe %>
 
-<br>
-
-<div>
-  <%= link_to "Show this recipe", @recipe %> |
-  <%= link_to "Back to recipes", recipes_path %>
+<div class="mt-8">
+  <%= link_to "Show this recipe", @recipe, class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4" %>
+  <%= link_to "Back to recipes", recipes_path, class: "bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" %>
 </div>

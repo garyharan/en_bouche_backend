@@ -1,14 +1,18 @@
-<p style="color: green"><%= notice %></p>
+<p class="text-green-500"><%= notice %></p>
 
-<h1>Recipes</h1>
+<h1 class="text-3xl font-bold mb-4">Recipes</h1>
 
-<div id="recipes">
+<div id="recipes" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <% if @recipes.empty? %>
+    <p class="p-5">No recipes yet.</p>
+  <% end %>
+
   <% @recipes.each do |recipe| %>
     <%= render recipe %>
     <p>
-      <%= link_to "Show this recipe", recipe %>
+      <%= link_to "Show this recipe", recipe, class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New recipe", new_recipe_path %>
+<%= link_to "New recipe", new_recipe_path, class: "bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" %>
