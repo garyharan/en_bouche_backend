@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  instructions: MyText
-  language: MyString
+  name: Saucisson
+  instructions: Faites comme d'habitude
+  language: fr
 
 two:
-  name: MyString
-  instructions: MyText
-  language: MyString
+  name: Magret de canard séché
+  instructions: Dans le sel 6h... rincer, secher... enrober d'épice et pendre dans un cellier jusqu'à 40% de perte de poids
+  language: fr

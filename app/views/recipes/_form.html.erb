@@ -16,6 +16,22 @@
     <%= form.text_field :name, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
   </div>
 
+  <fieldset>
+    <legend class="block text-gray-700 font-bold mb-2">Ingredients</legend>
+
+    <%= form.fields_for :ingredients do |ingredient_fields| %>
+      <div class="mb-4">
+        <%= ingredient_fields.label :name, class: "block text-gray-700 font-bold mb-2" %>
+        <%= ingredient_fields.text_field :name, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+      </div>
+
+      <div class="mb-4">
+        <%= ingredient_fields.label :quantity, class: "block text-gray-700 font-bold mb-2" %>
+        <%= ingredient_fields.text_field :quantity, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+      </div>
+    <% end %>
+  </fieldset>
+
   <div class="mb-4">
     <%= form.label :instructions, class: "block text-gray-700 font-bold mb-2" %>
     <%= form.text_area :instructions, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
