@@ -10,11 +10,9 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body class="bg-slate-50	">
-    <div class="h-screen flex justify-center">
-      <div class="w-full max-w-5xl m-1 p-3 self-center bg-white">
-        <%= yield %>
-      </div>
+  <body class="bg-slate-50 m-10 p-20">
+    <div class="w-full max-w-5xl m-1 p-3 mx-auto bg-white shadow-lg rounded-lg">
+      <%= yield %>
     </div>
   </body>
 </html>
