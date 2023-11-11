@@ -5,13 +5,24 @@
   </p>
 
   <p>
-    <strong>Instructions:</strong>
-    <%= recipe.instructions %>
+    <strong>Ingredients:</strong>
+    <ul>
+      <% recipe.ingredients.each do |ingredient| %>
+        <li><%= ingredient.name %> <%= ingredient.quantity %></li>
+      <% end %>
+    </ul>
   </p>
 
-  <p>
-    <strong>Language:</strong>
-    <%= recipe.language %>
-  </p>
 
-</div>
+
+    <p>
+      <strong>Instructions:</strong>
+      <%= recipe.instructions %>
+    </p>
+
+    <p>
+      <strong>Language:</strong>
+      <%= recipe.language %>
+    </p>
+
+  </div>
