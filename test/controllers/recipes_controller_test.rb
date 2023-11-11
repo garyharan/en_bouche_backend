@@ -52,6 +52,13 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "edit should allow ingredients to display" do
+    get edit_recipe_url(recipes(:no_ingredients_recipe))
+    assert_response :success
+    assert_not_nil assigns(:recipe)
+    assert_not_empty assigns(:recipe).ingredients
+  end
+
   test "should update recipe" do
     patch recipe_url(@recipe), params: { recipe: { instructions: @recipe.instructions, language: @recipe.language, name: @recipe.name } }
     assert_redirected_to recipe_url(@recipe)

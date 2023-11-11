@@ -18,6 +18,7 @@ class RecipesController < ApplicationController
 
   # GET /recipes/1/edit
   def edit
+    @recipe.ingredients.build if @recipe.ingredients.empty?
   end
 
   # POST /recipes or /recipes.json

@@ -3,8 +3,10 @@
 <%= render @recipe %>
 
 <div>
-  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
-  <%= link_to "Back to recipes", recipes_path %>
+  <div class="flex justify-between items-center mb-4">
+    <%= link_to "Back to recipes", recipes_path, class: "text-blue-500 hover:text-blue-700" %>
+    <%= link_to "Edit this recipe", edit_recipe_path(@recipe), class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
+  </div>
 
-  <%= button_to "Destroy this recipe", @recipe, method: :delete %>
-</div>
+    <%= button_to "Destroy this recipe", @recipe, method: :delete, data: { confirm: "Are you sure?" }, class: "bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" %>
+  </div>
