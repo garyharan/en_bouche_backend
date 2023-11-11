@@ -24,14 +24,14 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create ingredients for recipe" do
-  # Unpermitted parameter: :ingredients_attributes. Context: { controller: RecipesController, action: create, request: #<ActionDispatch::Request:0x0000000108416438>, params: {"authenticity_token"=>"[FILTERED]", "recipe"=>{"name"=>"Pear", "ingredients_attributes"=>{"0"=>{"name"=>"Pear", "quantity"=>"1"}}, "instructions"=>"Cut pear... eat pair", "language"=>"en"}, "commit"=>"Save Recipe", "controller"=>"recipes", "action"=>"create"} }
-    assert_difference("Recipe.count") do
-      assert_difference("Ingredient.count") do
+    assert_difference("Recipe.count", 1) do
+      assert_difference("Ingredient.count", 2) do
         post recipes_url, params: {
           recipe: {
             name: "Pear",
             ingredients_attributes: {
-              "0" => { name: "Pear", quantity: "1" }
+              "0" => { name: "Pear", quantity: "1" },
+              "1" => { name: "Knife", quantity: "1"}
             },
             instructions: "Cut pear... eat pair",
             language: "en"
