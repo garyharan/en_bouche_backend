@@ -19,27 +19,33 @@
   <fieldset class="m-4" data-controller="ingredients">
     <legend class="block text-gray-700 font-bold mb-2">Ingredients</legend>
 
-    <%= form.fields_for :ingredients do |ingredient_fields| %>
-      <ul>
+    <ul>
+      <%= form.fields_for :ingredients do |ingredient_fields| %>
         <li>
+          <%= ingredient_fields.hidden_field :_destroy %>
           <div class="flex mb-4">
             <div class="w-1/2 pr-2">
               <%= ingredient_fields.label :name, class: "block text-gray-700 font-bold mb-2" %>
               <%= ingredient_fields.text_field :name, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
             </div>
-            <div class="w-1/2 pl-2">
+            <div class="w-1/4 pl-2 pr-2">
               <%= ingredient_fields.label :quantity, class: "block text-gray-700 font-bold mb-2" %>
               <%= ingredient_fields.number_field :quantity, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
             </div>
+            <div class="w-1/4 pl-2">
+              <button type="button" data-action="click->ingredients#removeIngredient" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                remove
+              </button>
+            </div>
           </div>
         </li>
-        <li>
-          <button type="button" data-action="click->ingredients#addIngredient" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-            Add an ingredient
-          </button>
-        </li>
-      </ul>
-    <% end %>
+      <% end %>
+      <li>
+        <button type="button" data-action="click->ingredients#addIngredient" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          Add an ingredient
+        </button>
+      </li>
+    </ul>
   </fieldset>
 
   <div class="mb-4">

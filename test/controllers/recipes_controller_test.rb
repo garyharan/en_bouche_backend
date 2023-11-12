@@ -41,7 +41,6 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
-
   test "should show recipe" do
     get recipe_url(@recipe)
     assert_response :success
@@ -63,6 +62,24 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
     patch recipe_url(@recipe), params: { recipe: { instructions: @recipe.instructions, language: @recipe.language, name: @recipe.name } }
     assert_redirected_to recipe_url(@recipe)
   end
+
+  test "should allow deletion of ingredients" do
+    recipe = @recipe
+    assert_difference("Ingredient.count", -1) do
+      patch recipe_url(recipe), params: {
+        recipe: {
+          name: "Pear",
+          ingredients_attributes: {
+            "0" => { id: @recipe.ingredients.first.id, name: @recipe.ingredients.first.name, quantity: @recipe.ingredients.first.quantity },
+            "1" => { id: @recipe.ingredients.last.id, name: @recipe.ingredients.last.name,  quantity: @recipe.ingredients.last.quantity, _destroy: "1" }
+          },
+          instructions: "Cut pear... eat pair",
+          language: "en"
+        }
+      }
+    end
+  end
+
 
   test "should destroy recipe" do
     assert_difference("Recipe.count", -1) do
