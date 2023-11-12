@@ -19,18 +19,22 @@
   <fieldset class="m-4" data-controller="ingredients">
     <legend class="block text-gray-700 font-bold mb-2">Ingredients</legend>
 
-    <ul>
+    <ul data-controller="drag">
       <%= form.fields_for :ingredients do |ingredient_fields| %>
         <li>
           <%= ingredient_fields.hidden_field :_destroy %>
           <div class="flex mb-4">
+          <%= ingredient_fields.text_field :position %>
+            <div class="flex items-center justify-center p-1 cursor-grab">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </div>
             <div class="w-1/2 pr-2">
-              <%= ingredient_fields.label :name, class: "block text-gray-700 font-bold mb-2" %>
-              <%= ingredient_fields.text_field :name, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+              <%= ingredient_fields.text_field :name, placeholder: 'Name', class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
             </div>
             <div class="w-1/4 pl-2 pr-2">
-              <%= ingredient_fields.label :quantity, class: "block text-gray-700 font-bold mb-2" %>
-              <%= ingredient_fields.number_field :quantity, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+              <%= ingredient_fields.number_field :quantity, placeholder: "Quantity", class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
             </div>
             <div class="w-1/4 pl-2">
               <button type="button" data-action="click->ingredients#removeIngredient" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">

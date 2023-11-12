@@ -71,6 +71,7 @@ end
         :language,
         ingredients_attributes: [
           :id,
+          :position,
           :_destroy,
           :name,
           :quantity

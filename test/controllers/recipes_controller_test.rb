@@ -64,9 +64,8 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should allow deletion of ingredients" do
-    recipe = @recipe
     assert_difference("Ingredient.count", -1) do
-      patch recipe_url(recipe), params: {
+      patch recipe_url(@recipe), params: {
         recipe: {
           name: "Pear",
           ingredients_attributes: {
@@ -80,6 +79,23 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "should allow positioning of ingredients" do
+    assert @recipe.ingredients.first.name  == "Sel"
+    assert @recipe.ingredients.last.name   == "Épaule de porc"
+
+    patch recipe_url(@recipe), params: {
+      recipe: {
+        ingredients_attributes: {
+          "0" => { id: @recipe.ingredients.first.id, position: 2 },
+          "1" => { id: @recipe.ingredients.last.id, position: 1 }
+        },
+        language: "en"
+      }
+    }
+
+    assert @recipe.ingredients.reload.first.name == "Épaule de porc"
+    assert @recipe.ingredients.reload.last.name == "Sel"
+  end
 
   test "should destroy recipe" do
     assert_difference("Recipe.count", -1) do

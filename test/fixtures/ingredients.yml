@@ -4,8 +4,10 @@ one:
   recipe: one
   name: Épaule de porc
   quantity: 1000
+  position: 2
 
 two:
   recipe: one
   name: Sel
   quantity: 12
+  position: 1
