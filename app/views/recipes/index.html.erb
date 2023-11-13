@@ -1,6 +1,6 @@
 <p class="text-green-500"><%= notice %></p>
 
-<h1 class="text-3xl font-bold mb-4">Recipes</h1>
+<h1 class="text-5xl font-bold mb-4">Recipes</h1>
 
 <div id="recipes" class="">
   <% if @recipes.empty? %>
@@ -8,18 +8,20 @@
   <% end %>
 
   <% @recipes.each do |recipe| %>
-  <div class="flex">
-    <div class="w-1/2">
-      <h2 class="text-2xl font-bold mb-2"><%= recipe.name %></h2>
-      <p class="text-lg mb-4"><%= recipe.ingredients.map(&:name).join(", ") %></p>
-    </div>
-    <div class="w-1/2">
-      <%= link_to "Show this recipe", recipe, class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
-    </div>
-  </div>
+    <%= link_to recipe, class: "block rounded hover:shadow p-2" do %>
+      <div class="flex items-center">
+        <div class="flex-grow">
+          <h2 class="text-2xl font-bold mb-2"><%= recipe.name %></h2>
+          <p class="text-xs mb-4"><%= recipe.ingredients.map(&:name).join(", ") %></p>
+        </div>
+        <div class="flex justify-end">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+        </div>
+      </div>
+    <% end %>
   <% end %>
 </div>
 
-<div>
+<div class="mt-10">
   <%= link_to "New recipe", new_recipe_path, class: "bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-10" %>
 </div>

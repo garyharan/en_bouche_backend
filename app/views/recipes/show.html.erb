@@ -10,13 +10,11 @@
 
 <div class="flex justify-end">
   <div class="mr-10">
-    <%= button_to edit_recipe_path(@recipe), class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" do %>
+    <%= link_to edit_recipe_path(@recipe), class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" do %>
       Edit
     <% end %>
   </div>
   <div>
-    <%= button_to @recipe, method: :delete, data: { confirm: "Are you sure?" }, class: "bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" do %>
-     Delete
-    <% end %>
+    <%= link_to 'Delete', recipe_path(@recipe), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: "text-red-500 hover:text-red-600" %>
   </div>
 </div>
