@@ -23,15 +23,15 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to recipe_url(Recipe.last)
   end
 
-  test "should create ingredients for recipe" do
+  test "should create ingredients with units for recipe" do
     assert_difference("Recipe.count", 1) do
       assert_difference("Ingredient.count", 2) do
         post recipes_url, params: {
           recipe: {
             name: "Pear",
             ingredients_attributes: {
-              "0" => { name: "Pear", quantity: "1" },
-              "1" => { name: "Knife", quantity: "1"}
+              "0" => { name: "Pear", quantity: "1", unit: nil },
+              "1" => { name: "Knife", quantity: "1", unit: "ml" }
             },
             instructions: "Cut pear... eat pair",
             language: "en"
@@ -39,6 +39,8 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
         }
       end
     end
+    assert Recipe.last.ingredients.last.name == "Knife"
+    assert Recipe.last.ingredients.last.unit == "ml"
   end
 
   test "should show recipe" do

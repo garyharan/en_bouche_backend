@@ -1,26 +1,14 @@
-<div id="<%= dom_id recipe %>">
-  <p>
-    <strong>Name:</strong>
-    <%= recipe.name %>
-  </p>
+<div id="<%= dom_id recipe %>" class="m-10">
+  <h1 class="text-4xl font-bold"><%= recipe.name %></h1>
 
-  <p>
-    <strong>Ingredients:</strong>
+  <div class="p-3">
     <ul>
       <% recipe.ingredients.each do |ingredient| %>
-        <li><%= ingredient.name %> <%= ingredient.quantity %></li>
+        <li><%= ingredient.name %> <%= ingredient.quantity %><%= ingredient.unit %></li>
       <% end %>
     </ul>
-  </p>
-
-    <p>
-      <strong>Instructions:</strong>
-      <%= recipe.instructions %>
-    </p>
-
-    <p>
-      <strong>Language:</strong>
-      <%= recipe.language %>
-    </p>
-
   </div>
+
+  <div><%= recipe.instructions %></div>
+  <div><%= recipe.language %></div>
+</div>

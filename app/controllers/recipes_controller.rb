@@ -74,7 +74,8 @@ end
           :position,
           :_destroy,
           :name,
-          :quantity
+          :quantity,
+          :unit
         ]
       )
     end
