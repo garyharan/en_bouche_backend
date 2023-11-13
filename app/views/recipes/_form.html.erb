@@ -16,7 +16,7 @@
     <%= form.text_field :name, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
   </div>
 
-  <fieldset class="m-4" data-controller="ingredients">
+  <fieldset class="m-4" data-controller="growing_list">
     <legend class="block text-gray-700 font-bold mb-2">Ingredients</legend>
 
     <ul data-controller="drag">
@@ -37,10 +37,10 @@
               <%= ingredient_fields.number_field :quantity, placeholder: "Quantity", class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
             </div>
             <div class="w-1/4 pl-2 pr-2">
-              <%= ingredient_fields.select :unit, options_for_select(units), {}, { class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" } %>
+              <%= ingredient_fields.select :unit, options_for_select(units, ingredient_fields.object.unit), {}, { class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" } %>
             </div>
             <div class="w-1/4 pl-2">
-              <button type="button" data-action="click->ingredients#removeIngredient" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+              <button type="button" data-action="click->growing_list#removeListItem" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
   <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
 </svg>
@@ -50,13 +50,50 @@
         </li>
       <% end %>
       <li>
-        <button type="button" data-action="click->ingredients#addIngredient" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+        <button type="button" data-action="click->growing_list#addListItem" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
         </button>
       </li>
     </ul>
+  </fieldset>
+
+  <fieldset class="m-4" data-controller="growing_list">
+    <legend class="block text-gray-700 font-bold mb-2">Steps</legend>
+
+    <ol data-controller="drag">
+      <%= form.fields_for :steps do |step_fields| %>
+        <li>
+          <div class="flex mb-4">
+            <%= step_fields.hidden_field :_destroy %>
+            <%= step_fields.hidden_field :position %>
+            <div class="flex items-center justify-center p-1 cursor-grab">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </div>
+            <div class="pr-2 flex-grow">
+              <%= step_fields.text_area :body, placeholder: 'Body', class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+            </div>
+            <div class="w-1/4 pl-2">
+              <button type="button" data-action="click->growing_list#removeListItem" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </li>
+      <% end %>
+      <li>
+        <button type="button" data-action="click->growing_list#addListItem" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </button>
+      </li>
+    </ol>
   </fieldset>
 
   <div class="mb-4">

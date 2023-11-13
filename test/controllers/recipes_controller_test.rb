@@ -10,8 +10,10 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get new" do
+  test "should get new with displayed empty ingredients and steps" do
     get new_recipe_url
+    assert assigns(:recipe).ingredients.any?
+    assert assigns(:recipe).steps.any?
     assert_response :success
   end
 
@@ -23,7 +25,7 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to recipe_url(Recipe.last)
   end
 
-  test "should create ingredients with units for recipe" do
+  test "should create recipe with ingredients and steps" do
     assert_difference("Recipe.count", 1) do
       assert_difference("Ingredient.count", 2) do
         post recipes_url, params: {
@@ -33,6 +35,10 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
               "0" => { name: "Pear", quantity: "1", unit: nil },
               "1" => { name: "Knife", quantity: "1", unit: "ml" }
             },
+            steps_attributes: {
+              "0" => { body: "Cut pear" },
+              "1" => { body: "Eat pear" }
+            },
             notes: "Cut pear... eat pair",
             language: "en"
           }
@@ -41,6 +47,9 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
     end
     assert Recipe.last.ingredients.last.name == "Knife"
     assert Recipe.last.ingredients.last.unit == "ml"
+
+    assert Recipe.last.steps.first.body == "Cut pear"
+    assert Recipe.last.steps.last.body == "Eat pear"
   end
 
   test "should show recipe" do
@@ -53,11 +62,12 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "edit should allow ingredients to display" do
+  test "edit should allow ingredients and steps to display in form" do
     get edit_recipe_url(recipes(:no_ingredients_recipe))
     assert_response :success
     assert_not_nil assigns(:recipe)
     assert_not_empty assigns(:recipe).ingredients
+    assert_not_empty assigns(:recipe).steps
   end
 
   test "should update recipe" do

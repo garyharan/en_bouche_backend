@@ -14,11 +14,13 @@ class RecipesController < ApplicationController
   def new
     @recipe = Recipe.new
     @recipe.ingredients.build
+    @recipe.steps.build
   end
 
   # GET /recipes/1/edit
   def edit
     @recipe.ingredients.build if @recipe.ingredients.empty?
+    @recipe.steps.build if @recipe.steps.empty?
   end
 
   # POST /recipes or /recipes.json
@@ -76,6 +78,12 @@ end
           :name,
           :quantity,
           :unit
+        ],
+        steps_attributes: [
+          :id,
+          :body,
+          :position,
+          :_destroy
         ]
       )
     end
