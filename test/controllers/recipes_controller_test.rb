@@ -17,7 +17,7 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create recipe" do
     assert_difference("Recipe.count") do
-      post recipes_url, params: { recipe: { instructions: @recipe.instructions, language: @recipe.language, name: @recipe.name } }
+      post recipes_url, params: { recipe: { notes: @recipe.notes, language: @recipe.language, name: @recipe.name } }
     end
 
     assert_redirected_to recipe_url(Recipe.last)
@@ -33,7 +33,7 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
               "0" => { name: "Pear", quantity: "1", unit: nil },
               "1" => { name: "Knife", quantity: "1", unit: "ml" }
             },
-            instructions: "Cut pear... eat pair",
+            notes: "Cut pear... eat pair",
             language: "en"
           }
         }
@@ -61,7 +61,7 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update recipe" do
-    patch recipe_url(@recipe), params: { recipe: { instructions: @recipe.instructions, language: @recipe.language, name: @recipe.name } }
+    patch recipe_url(@recipe), params: { recipe: { notes: @recipe.notes, language: @recipe.language, name: @recipe.name } }
     assert_redirected_to recipe_url(@recipe)
   end
 
@@ -74,7 +74,7 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
             "0" => { id: @recipe.ingredients.first.id, name: @recipe.ingredients.first.name, quantity: @recipe.ingredients.first.quantity },
             "1" => { id: @recipe.ingredients.last.id, name: @recipe.ingredients.last.name,  quantity: @recipe.ingredients.last.quantity, _destroy: "1" }
           },
-          instructions: "Cut pear... eat pair",
+          notes: "Cut pear... eat pair",
           language: "en"
         }
       }

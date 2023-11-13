@@ -2,15 +2,15 @@
 
 one:
   name: Saucisson
-  instructions: Faites comme d'habitude
+  notes: Faites comme d'habitude
   language: fr
 
 two:
   name: Magret de canard séché
-  instructions: Dans le sel 6h... rincer, secher... enrober d'épice et pendre dans un cellier jusqu'à 40% de perte de poids
+  notes: Dans le sel 6h... rincer, secher... enrober d'épice et pendre dans un cellier jusqu'à 40% de perte de poids
   language: fr
 
 no_ingredients_recipe:
   name: Bork bork bork
-  instructions: Bork bork bork
+  notes: Bork bork bork
   language: en

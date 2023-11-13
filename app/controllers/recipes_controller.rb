@@ -67,7 +67,7 @@ end
     def recipe_params
       params.require(:recipe).permit(
         :name,
-        :instructions,
+        :notes,
         :language,
         ingredients_attributes: [
           :id,
