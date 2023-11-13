@@ -22,6 +22,21 @@ export default class extends Controller {
 
     list.insertBefore(newListItem, list.lastElementChild);
     newListItem.style.display = "list-item";
+
+    // focus on the first visible input field of the new list item
+    const firstInputField = newListItem.querySelector("input:not([type='hidden']), textarea:not([type='hidden'])");
+    if (firstInputField) {
+      firstInputField.focus();
+    }
+  }
+
+  enableShortCutForAddingListItem(field) {
+    field.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" && event.metaKey) {
+        event.preventDefault();
+        this.addListItem();
+      }
+    });
   }
 
   removeListItem(event) {
