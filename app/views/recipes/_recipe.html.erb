@@ -3,12 +3,21 @@
     <%= recipe.name %>
   </h1>
 
-  <div class="p-3">
-    <ul>
-      <% recipe.ingredients.each do |ingredient| %>
-        <li><%= ingredient.name %> <%= ingredient.quantity %><%= ingredient.unit %></li>
-      <% end %>
-    </ul>
+  <div class="flex flex-row items-center border-b-2 p-3 pb-2">
+    <div class="grow-0">
+      <ul class="pr-4">
+        <% recipe.ingredients.each do |ingredient| %>
+          <li><%= ingredient.name %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="">
+      <ul>
+        <% recipe.ingredients.each do |ingredient| %>
+          <li class="text-right"><%= ingredient.quantity %><%= ingredient.unit %></li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 
   <div class="p-3">
