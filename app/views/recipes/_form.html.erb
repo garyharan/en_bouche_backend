@@ -30,16 +30,16 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
               </svg>
             </div>
-            <div class="pr-2">
+            <div class="pr-2 flex-grow">
               <%= ingredient_fields.text_field :name, placeholder: 'Name', class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
             </div>
-            <div class="w-1/4 pl-2 pr-2">
+            <div class="pl-2 pr-2">
               <%= ingredient_fields.number_field :quantity, placeholder: "Quantity", class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
             </div>
-            <div class="w-1/4 pl-2 pr-2">
+            <div class="pl-2 pr-2">
               <%= ingredient_fields.select :unit, options_for_select(units, ingredient_fields.object.unit), {}, { class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" } %>
             </div>
-            <div class="w-1/4 pl-2">
+            <div class="pl-2">
               <button type="button" data-action="click->growing_list#removeListItem" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
   <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -103,7 +103,7 @@
 
   <div class="mb-4">
     <%= form.label :language, class: "block text-gray-700 font-bold mb-2" %>
-    <%= form.text_field :language, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+    <%= form.select :language, Recipe::LANGUAGES, {}, { class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" } %>
   </div>
 
   <div class="flex items-center justify-between">
