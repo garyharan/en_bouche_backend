@@ -9,7 +9,6 @@ export default class extends Controller {
     console.log("Add list item method called");
     const list = this.element.querySelector("ul, ol");
     const listItems = list.querySelectorAll("li");
-    const _AddIngredientButtonLi = listItems[listItems.length - 1];
     const lastListItem = listItems[listItems.length - 2];
 
     const newListItem = lastListItem.cloneNode(true);
