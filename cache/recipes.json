@@ -660,7 +660,873 @@
           "quantity": 800,
           "position": 1,
           "unit": "g"
-        },
+        },[
+          {
+            "recipe": {
+              "id": 4,
+              "name": "Pâté de campagne",
+              "notes": "Les pâtés de campagnes gagnent à être vieillis pour que les saveurs s'adoucissent et s'uniformisent.\n\nDe mélanger les lanières avec l'épices réduit le besoin de devoir malaxer la mêlée après avoir haché.",
+              "language": "fr",
+              "ingredients": [
+                {
+                  "id": 8,
+                  "name": "Gorge de porc",
+                  "quantity": 500,
+                  "position": 1,
+                  "unit": "g"
+                },
+                {
+                  "id": 15,
+                  "name": "Poitrine de porc fraîche",
+                  "quantity": 500,
+                  "position": 2,
+                  "unit": "g"
+                },
+                {
+                  "id": 9,
+                  "name": "Foie de volaille ou porc",
+                  "quantity": 500,
+                  "position": 3,
+                  "unit": "g"
+                },
+                {
+                  "id": 10,
+                  "name": "Muscade ou 4 épices",
+                  "quantity": 4,
+                  "position": 4,
+                  "unit": "g"
+                },
+                {
+                  "id": 13,
+                  "name": "Sel",
+                  "quantity": 24,
+                  "position": 5,
+                  "unit": "g"
+                },
+                {
+                  "id": 11,
+                  "name": "Cognac, Armagnac ou Whiskey",
+                  "quantity": 30,
+                  "position": 6,
+                  "unit": "ml"
+                }
+              ],
+              "steps": [
+                {
+                  "id": 6,
+                  "body": "En premier lieu ciseler les échalotes finement, des épices et du sel et mélanger avec votre alcool de choix pour que ce soit aussi homogène que possible.",
+                  "position": 1
+                },
+                {
+                  "id": 43,
+                  "body": "Couper la gorge, la poitrine et le foie en lanières et mélanger avec le mélange d'épices.",
+                  "position": 2
+                },
+                {
+                  "id": 7,
+                  "body": "Hacher la viande avec un hachoir (4-6mm).",
+                  "position": 3
+                },
+                {
+                  "id": 8,
+                  "body": "Déposer le tout dans des petites ou moyennes terrines ne dépassant pas 2cm du bord.",
+                  "position": 4
+                },
+                {
+                  "id": 9,
+                  "body": "Déposer les terrines dans une cocotte ou une marmite et cuire à ébullition pendant 3h.",
+                  "position": 5
+                }
+              ]
+            }
+          },
+          {
+            "recipe": {
+              "id": 5,
+              "name": "Magret de canard séché",
+              "notes": "Il est possible de faire cette recette avec des poitrines (environ 225g par poitrine) plutôt que des magrets (environ 375g).   C'est parfois beaucoup moins cher et c'est tout aussi bon avec cette préparation.\n\nSi vous préférez une technique sans sachets en plastique vous pouvez enterrer les magrets dans du gros sel à la place.  Pour un magret de 225g laisser enterré 2h30 et pour un magret de 400g laissez enterré 4h.  Soit environ 1h par 100g.\n\nSi vous n'avez pas de cellier ou frigo controlé il existe une méthode au torchon.  Emballer vos magrets dans des torchons propres et pendez les en bas de votre frigo.  L'idéal reste d'avoir un cellier contrôlé mais cela peut dépanner lorsqu'on commence.",
+              "language": "fr",
+              "ingredients": [
+                {
+                  "id": 16,
+                  "name": "Magrets de canard",
+                  "quantity": 1000,
+                  "position": 1,
+                  "unit": "g"
+                },
+                {
+                  "id": 17,
+                  "name": "Sel",
+                  "quantity": 45,
+                  "position": 2,
+                  "unit": "g"
+                },
+                {
+                  "id": 18,
+                  "name": "Sucre de canne (facultatif)",
+                  "quantity": 10,
+                  "position": 3,
+                  "unit": "g"
+                },
+                {
+                  "id": 22,
+                  "name": "Poivre moulue",
+                  "quantity": 2,
+                  "position": 4,
+                  "unit": "g"
+                },
+                {
+                  "id": 19,
+                  "name": "Baie de genièvre moulue",
+                  "quantity": 2,
+                  "position": 5,
+                  "unit": "g"
+                },
+                {
+                  "id": 20,
+                  "name": "Piment d'espelette ou chipotle",
+                  "quantity": 1,
+                  "position": 6,
+                  "unit": "g"
+                },
+                {
+                  "id": 21,
+                  "name": "Feuille de laurier moulue finement",
+                  "quantity": 1,
+                  "position": 7,
+                  "unit": "g"
+                }
+              ],
+              "steps": [
+                {
+                  "id": 10,
+                  "body": "Déposer les magrets et le sel dans des sacs de type congélation ou sous-vide et placer les au frigo pour 3 jours.  Assurez-vous de retourner les magrets deux fois par jours pour assurer une bonne uniformité.",
+                  "position": 3
+                },
+                {
+                  "id": 11,
+                  "body": "Sortez les des sacs et rincez à l'eau froide et sécher avec du papier absorbant.",
+                  "position": 4
+                },
+                {
+                  "id": 12,
+                  "body": "Saupoudrez du mélange d'épices et placez dans un cellier à 12-14C avec 70-85% d'humidité.",
+                  "position": 5
+                },
+                {
+                  "id": 13,
+                  "body": "Résister à l'envie pendant 6 à 8 semaines.",
+                  "position": 6
+                }
+              ]
+            }
+          },
+          {
+            "recipe": {
+              "id": 6,
+              "name": "Gravlax de Saumon",
+              "notes": "Ce bijou de salaison nordique est une des préparations de luxe malgré sa simplicité.  Elle bénéficie beaucoup d'une bonne qualité de saumon.",
+              "language": "fr",
+              "ingredients": [
+                {
+                  "id": 23,
+                  "name": "Filet de saumon frais entier",
+                  "quantity": 1000,
+                  "position": 1,
+                  "unit": "g"
+                },
+                {
+                  "id": 24,
+                  "name": "Sel",
+                  "quantity": 30,
+                  "position": 2,
+                  "unit": "g"
+                },
+                {
+                  "id": 25,
+                  "name": "Sucre",
+                  "quantity": 10,
+                  "position": 3,
+                  "unit": "g"
+                },
+                {
+                  "id": 26,
+                  "name": "Aneth fraîche, carvi ou coriandre",
+                  "quantity": 20,
+                  "position": 4,
+                  "unit": "g"
+                },
+                {
+                  "id": 27,
+                  "name": "Aquavit, Gin ou brandy (facultatif)",
+                  "quantity": 15,
+                  "position": 5,
+                  "unit": "ml"
+                }
+              ],
+              "steps": [
+                {
+                  "id": 14,
+                  "body": "Parez le saumon en retirant les arrêtes si il y en a (votre poissonnier peut habituellement le faire).  Vous pouvez faire cette préparation avec la peau ou non.  C'est votre choix.",
+                  "position": 1
+                },
+                {
+                  "id": 15,
+                  "body": "Mélangez le sel et le sucre.",
+                  "position": 2
+                },
+                {
+                  "id": 16,
+                  "body": "Écrasez sans découper l'aneth fraîche",
+                  "position": 3
+                },
+                {
+                  "id": 17,
+                  "body": "Placer le saumon dans un sac sous-vide, le sel et le sucre ainsi que l'aneth que vous déposez du côté chair si vous avez conservé la peau, sinon sur les deux côtés.",
+                  "position": 4
+                },
+                {
+                  "id": 18,
+                  "body": "Ajouter l'alcool à ce stade si vous en désirez (facultatif). Laissez macérer dans le sac 12 à 72h en plaçant entre deux planches lourdes et retourner 2 fois par jour.  Vous aurez les meilleurs résultats à 72h.",
+                  "position": 5
+                },
+                {
+                  "id": 19,
+                  "body": "Sortir des sachets et retirer le liquide avec du papier absorbant.",
+                  "position": 6
+                }
+              ]
+            }
+          },
+          {
+            "recipe": {
+              "id": 7,
+              "name": "Alcool de cerises",
+              "notes": "Les noyaux seuls peuvent aussi être utilisés pour faire une liqueur qui aura un goût léger d'amandes. ",
+              "language": "fr",
+              "ingredients": [
+                {
+                  "id": 28,
+                  "name": "Cerises mures (avec noyaux)",
+                  "quantity": 500,
+                  "position": 1,
+                  "unit": "g"
+                },
+                {
+                  "id": 29,
+                  "name": "Sucre",
+                  "quantity": 100,
+                  "position": 2,
+                  "unit": "g"
+                },
+                {
+                  "id": 30,
+                  "name": "Rum blanc, vodka, cognac, brandy ou alcool distillé",
+                  "quantity": 400,
+                  "position": 3,
+                  "unit": "ml"
+                }
+              ],
+              "steps": [
+                {
+                  "id": 20,
+                  "body": "Incorporez le tout dans un bocal avec couvercle et déposer à l'abris de la lumière pour 4-12 mois.  Ajustez le niveau de sucre à votre goût avant de dégustez avec vos convives.",
+                  "position": 1
+                }
+              ]
+            }
+          },
+          {
+            "recipe": {
+              "id": 8,
+              "name": "Saucisson de porc fermier",
+              "notes": "La poudre de penicillium est une spore qui est naturellement présente dans beaucoup de saucissons.  C'est une forme de moisissure blanche qu'on appelle couramment la fleur blanche dans le jargon.  Cette fleur contribue non seulement au plaisir visuel et au gout mais elle permet aussi de réduire les chances de croissances de mycotoxin causée par certaines bactéries et moisissures moins désirables.\n\nIl est possible d'acheter cette poudre en sachet lyophilisés sur internet mais il est aussi possible de frotter un saucisson déjà fleuri pour en extraire les spores.  Délayer simplement la poudre récupérée dans un peu d'eau comme on fait avec la poudre lyophilisée. \n\nLe sucre est facultatif mais permet d'activer certaines propriétés enzymatiques.  Si le porc vient d'être abattu le jour même il n'est pas obligé de rajouter du sucre car les muscles auront encore assez de glucides naturellement présents pour permettre les réactions enzymatiques bénéfiques.",
+              "language": "fr",
+              "ingredients": [
+                {
+                  "id": 31,
+                  "name": "Épaule de porc",
+                  "quantity": 1500,
+                  "position": 1,
+                  "unit": "g"
+                },
+                {
+                  "id": 32,
+                  "name": "Poitrine (flanc de porc)",
+                  "quantity": 1000,
+                  "position": 2,
+                  "unit": "g"
+                },
+                {
+                  "id": 33,
+                  "name": "Lard de bardière (gras dur)",
+                  "quantity": 500,
+                  "position": 3,
+                  "unit": "g"
+                },
+                {
+                  "id": 34,
+                  "name": "Sel",
+                  "quantity": 84,
+                  "position": 4,
+                  "unit": "g"
+                },
+                {
+                  "id": 35,
+                  "name": "Sucre de canne",
+                  "quantity": 15,
+                  "position": 5,
+                  "unit": "g"
+                },
+                {
+                  "id": 36,
+                  "name": "Poivre noir fraîchement moulu",
+                  "quantity": 9,
+                  "position": 6,
+                  "unit": "g"
+                },
+                {
+                  "id": 37,
+                  "name": "Vin rouge",
+                  "quantity": 30,
+                  "position": 7,
+                  "unit": "ml"
+                },
+                {
+                  "id": 38,
+                  "name": "Boyau de porc ou d'agneau",
+                  "quantity": 1,
+                  "position": 8,
+                  "unit": ""
+                },
+                {
+                  "id": 39,
+                  "name": "Poudre de penicillium nalgiovense (facultatif)",
+                  "quantity": 1,
+                  "position": 9,
+                  "unit": "g"
+                }
+              ],
+              "steps": [
+                {
+                  "id": 21,
+                  "body": "Macérer le sel, sucre et poivre dans le vin rouge.",
+                  "position": 1
+                },
+                {
+                  "id": 22,
+                  "body": "Couper l'épaule, le flanc de porc et le lard en lanières. (voir notes)",
+                  "position": 2
+                },
+                {
+                  "id": 23,
+                  "body": "Déposer le mélange d'épices et de vin sur vos lanières et passer au hachoir 8mm.",
+                  "position": 3
+                },
+                {
+                  "id": 24,
+                  "body": "Laisser la viande reposer à basse température dans un frigo pour 1 heure pendant que vous préparer le plan de travail pour l'embossage.",
+                  "position": 4
+                },
+                {
+                  "id": 25,
+                  "body": "Embosser dans les boyaux.",
+                  "position": 5
+                },
+                {
+                  "id": 26,
+                  "body": "Mouiller la poudre de penicillium nalgiovense avec assez d'eau pour l'étaler au pinceau sur tous les boyaux",
+                  "position": 6
+                },
+                {
+                  "id": 27,
+                  "body": "Pendre les boyaux embossés dans un cellier à 13C et 80% d'humidité pour 6-12 semaines (boyaux d'agneaux) ou 8-16 semaines (boyaux de porc).",
+                  "position": 7
+                }
+              ]
+            }
+          },
+          {
+            "recipe": {
+              "id": 9,
+              "name": "Filets mignons de porc séchés",
+              "notes": "Cette recette est très simple et pas chère du tout.  Elle peut aussi se faire avec la méthode torchon dans le frigo. \n\nQuelques exemples de mélange d'épices à essayer: \n\nMexicaine: Chili mexicain, poudre d'ail, poudre d'oignon, paprika fumé, cumin.\nIndienne: Poudre de cari, poivre, cumin\nProvencale: Herbes de Provence, poivre\nInuit: Poivre, Baie de genièvre, feuille de laurier(moulue)\n\nPour les quantités l'idée est de bien enrober les filets avant de les pendre.\n\nPour la P. nalgiovense vous pouvez frotter la fleur blanche sur un saucisson de qualité et récupérer la poudre.  Ceci favorise la croissance de fleur blanche satisfaisante au gout et en apparence. ",
+              "language": "fr",
+              "ingredients": [
+                {
+                  "id": 40,
+                  "name": "Filets mignons de porc",
+                  "quantity": 1000,
+                  "position": 1,
+                  "unit": "g"
+                },
+                {
+                  "id": 41,
+                  "name": "Sel",
+                  "quantity": 35,
+                  "position": 2,
+                  "unit": "g"
+                },
+                {
+                  "id": 42,
+                  "name": "Poivre",
+                  "quantity": 2,
+                  "position": 3,
+                  "unit": "g"
+                },
+                {
+                  "id": 44,
+                  "name": "P. nalgiovense (facultatif)",
+                  "quantity": 1,
+                  "position": 4,
+                  "unit": "g"
+                },
+                {
+                  "id": 43,
+                  "name": "Épices de votre choix (voir notes)",
+                  "quantity": null,
+                  "position": 6,
+                  "unit": ""
+                }
+              ],
+              "steps": [
+                {
+                  "id": 28,
+                  "body": "Retirer les fascias des filets de porc (c'est la peau argentée qui est très coriace en bouche).",
+                  "position": 1
+                },
+                {
+                  "id": 29,
+                  "body": "Dans un sac en plastique placer les filets, le sel et le poivre ainsi que les épices de votre choix.",
+                  "position": 2
+                },
+                {
+                  "id": 30,
+                  "body": "Placer au frigo 3 jours en prenant le soin de retourner 1-2 fois par jour pour que ce soit uniforme.",
+                  "position": 3
+                },
+                {
+                  "id": 31,
+                  "body": "Sortir du sac, essuyer l'excédent d'humidité et enrober de vos épices préférées.  Si vous avez de la poudre de P. nalgiovense incorporer là avec votre mélange d'épices. ",
+                  "position": 4
+                },
+                {
+                  "id": 32,
+                  "body": "Pendre avec un crochet en métal de charcuterie dans une cave à 13C/80% d'hygrométrie jusqu'à 40% de perte de poids (environ 4-8 semaines).",
+                  "position": 5
+                }
+              ]
+            }
+          },
+          {
+            "recipe": {
+              "id": 10,
+              "name": "Coppa",
+              "notes": "La coppa prend plus de temps de séchage à cause de son épaisseur et gagne à être tranché très finement lors de la dégustation. ",
+              "language": "fr",
+              "ingredients": [
+                {
+                  "id": 45,
+                  "name": "Une échine de porc",
+                  "quantity": 2000,
+                  "position": 1,
+                  "unit": "g"
+                },
+                {
+                  "id": 46,
+                  "name": "Sel",
+                  "quantity": 30,
+                  "position": 2,
+                  "unit": "g"
+                },
+                {
+                  "id": 47,
+                  "name": "Sucre de canne",
+                  "quantity": 5,
+                  "position": 3,
+                  "unit": "g"
+                },
+                {
+                  "id": 48,
+                  "name": "Poivre",
+                  "quantity": 2,
+                  "position": 4,
+                  "unit": "g"
+                },
+                {
+                  "id": 49,
+                  "name": "Herbes de Provence",
+                  "quantity": 20,
+                  "position": 5,
+                  "unit": "g"
+                },
+                {
+                  "id": 50,
+                  "name": "Fil de boucher en cotton",
+                  "quantity": null,
+                  "position": 6,
+                  "unit": ""
+                }
+              ],
+              "steps": [
+                {
+                  "id": 33,
+                  "body": "L'échine doit être bien parée avant la pesée. Assurez vous d'avoir une échine bien cylindrique avec aucun morceau qui dépasse.",
+                  "position": 1
+                },
+                {
+                  "id": 34,
+                  "body": "Placer l'échine, le sel, le sucre et le poivre ainsi que la moitié des herbes de Provence dans un sac allant sous-vide.  Déposer au frigo pendant 5 jours en prenant soin de tourner la pièce 1-2 fois par jour.",
+                  "position": 2
+                },
+                {
+                  "id": 35,
+                  "body": "Sortez la pièce du sac et essuyer avec du papier absorbant.  Prenez l'autre moitié de des herbes de Provence.",
+                  "position": 3
+                },
+                {
+                  "id": 36,
+                  "body": "Ficeler la coppa en utilisant la technique du rôti et pendre dans une cave à 13C pour 80% d'humidité jusqu'à 40% de perte de poids (environ 2 à 4 mois).",
+                  "position": 4
+                }
+              ]
+            }
+          },
+          {
+            "recipe": {
+              "id": 11,
+              "name": "Bacon Canadien fumé à l'érable",
+              "notes": "Si vous voulez un gout encore plus fort d'érable doubler le montant de sirop et faite le réduire à feux doux de moitié.   Cependant ceci va plus sucrer votre bacon.\n\nAu Canada ce bacon est tranché entre 2mm et 7mm et cuit dans une poêle ou au four et servi le matin ave des pommes de terre rissolés et des oeufs.  Vous pouvez aussi le déguster en apéro mais il se mange préférablement chaud.",
+              "language": "fr",
+              "ingredients": [
+                {
+                  "id": 51,
+                  "name": "Poitrine de porc sans la couenne",
+                  "quantity": 1000,
+                  "position": 1,
+                  "unit": "g"
+                },
+                {
+                  "id": 52,
+                  "name": "Sel",
+                  "quantity": 50,
+                  "position": 2,
+                  "unit": "g"
+                },
+                {
+                  "id": 53,
+                  "name": "Sirop d'érable",
+                  "quantity": 25,
+                  "position": 3,
+                  "unit": "g"
+                },
+                {
+                  "id": 54,
+                  "name": "Bois d'érable",
+                  "quantity": null,
+                  "position": 4,
+                  "unit": ""
+                }
+              ],
+              "steps": [
+                {
+                  "id": 37,
+                  "body": "Déposer le tout dans un sac allant sous vide et placer dans un frigo pour 4 jours en tournant 1-2 fois par jour.",
+                  "position": 1
+                },
+                {
+                  "id": 38,
+                  "body": "Sortir du sac et éponger l'exsudat avec un papier absorbant.",
+                  "position": 2
+                },
+                {
+                  "id": 39,
+                  "body": "Sécher dans un frigo ou dans une cave 1 jour.",
+                  "position": 3
+                },
+                {
+                  "id": 40,
+                  "body": "Fumé à froid pendant 4-8h avec du bois d'érable.",
+                  "position": 4
+                }
+              ]
+            }
+          },
+          {
+            "recipe": {
+              "id": 12,
+              "name": "Oignons au saffron ",
+              "notes": "Cette technique permet d'avoir des oignons marinés en 10 minutes qui se conservent pendant 3-6 mois.  Vous pouvez aussi jouer avec les saveurs.  \n\nTentez les oignons au cumin pour accompagner un burger d'agneaux, à la cardamome pour accompagner le riz pilaf, à l'aneth ou l'estragon pour accompagner les poissons blancs et fruits de mers.\n\nToutes les déclinaisons peuvent êtres servies sur une tranche de terrine de campagne pour rajouter une pointe d'acidité à votre entrée. ",
+              "language": "fr",
+              "ingredients": [
+                {
+                  "id": 55,
+                  "name": "Oignon",
+                  "quantity": 3,
+                  "position": 1,
+                  "unit": ""
+                },
+                {
+                  "id": 56,
+                  "name": "Eau",
+                  "quantity": 750,
+                  "position": 2,
+                  "unit": "ml"
+                },
+                {
+                  "id": 57,
+                  "name": "Vinaigre de votre choix",
+                  "quantity": 250,
+                  "position": 3,
+                  "unit": "ml"
+                },
+                {
+                  "id": 58,
+                  "name": "Graines de poivre entières",
+                  "quantity": 12,
+                  "position": 4,
+                  "unit": ""
+                },
+                {
+                  "id": 59,
+                  "name": "Une pincée de saffron",
+                  "quantity": null,
+                  "position": 5,
+                  "unit": ""
+                }
+              ],
+              "steps": [
+                {
+                  "id": 42,
+                  "body": "Portez l'eau, le vinaigre, le poivre et le saffron à ébullition.",
+                  "position": 2
+                },
+                {
+                  "id": 41,
+                  "body": "Une fois l'eau bouillante déposer la dans le bocal jusqu'à 2cm du rebord et refermer le couvercle.",
+                  "position": 4
+                }
+              ]
+            }
+          },
+          {
+            "recipe": {
+              "id": 13,
+              "name": "Faux saumon fumé",
+              "notes": "Les carottes dites à bétail au Canada sont des grosses carottes trop volumineuses pour la consommation habituelle.  Une seule carotte peut peser entre 150-500g.\n\nRôties au fumoir nous offre une alternative au saumon fumé pour 1/19 du prix.\n\nSi vous ne trouvez pas de mirin vous pouvez substituer pour 400ml de mirin mélanger 150 ml de vinaigre blanc, 50ml de vermouth, sake ou sherry, 200ml d'eau et 10g de sucre de canne.\n\nCes carottes façon saumon fumé sont idéales servies sur une salade cèleri rave à la rémoulade garnies de câpres et d'oignons marinés à l'aneth(voir les notes dans la recette d'oignons au saffron).  Ce plat vient alléger les repas malgré une pointe de fumée qui saura éveiller les papilles gustatives.",
+              "language": "fr",
+              "ingredients": [
+                {
+                  "id": 60,
+                  "name": "Carotte 'à bétail'",
+                  "quantity": 800,
+                  "position": 1,
+                  "unit": "g"
+                },
+                {
+                  "id": 61,
+                  "name": "Huile neutre",
+                  "quantity": 80,
+                  "position": 2,
+                  "unit": "ml"
+                },
+                {
+                  "id": 62,
+                  "name": "Vinaigre mirin (voir notes)",
+                  "quantity": 400,
+                  "position": 3,
+                  "unit": "ml"
+                },
+                {
+                  "id": 63,
+                  "name": "Eau",
+                  "quantity": 400,
+                  "position": 4,
+                  "unit": "ml"
+                }
+              ],
+              "steps": [
+                {
+                  "id": 44,
+                  "body": "Dans un plat allant au fumoir déposer assez de sel au fond pour soutenir les carottes.  Déposez les et ensevelissez les du reste du sel.",
+                  "position": 1
+                },
+                {
+                  "id": 45,
+                  "body": "Dans un bol ou plat allant au four déposer le mirin et l'eau.",
+                  "position": 2
+                },
+                {
+                  "id": 46,
+                  "body": "Cuire au fumoir à 180C/350F pendant 1h30-2h.  Prenez soin d'ajouter de l'eau si votre mélange de mirin et d'eau réduit plus que la moitié.",
+                  "position": 3
+                },
+                {
+                  "id": 47,
+                  "body": "Refroidissez les carottes au frigo et une fois froides tranchez les à la mandoline sur la longueur. ",
+                  "position": 5
+                },
+                {
+                  "id": 48,
+                  "body": "Mélangez avec le mélange de mirin et l'huile neutre.",
+                  "position": 6
+                }
+              ]
+            }
+          },
+          {
+            "recipe": {
+              "id": 14,
+              "name": "Jerky de boeuf",
+              "notes": "Cette recette requiert soit un déshydrateur, un four à convection allant à très basse température (idéalement à moins de 70C/150F) ou un fumoir à granules ayant l'option ventilée.\n\nConservez le jerky sous-vide pendant 6 mois et se congèle particulièrement bien.  Une recette formidable pour les randonnées et le camping.",
+              "language": "fr",
+              "ingredients": [
+                {
+                  "id": 64,
+                  "name": "Bavette de boeuf maigre",
+                  "quantity": 1000,
+                  "position": 1,
+                  "unit": "g"
+                },
+                {
+                  "id": 65,
+                  "name": "Sauce Soya",
+                  "quantity": 250,
+                  "position": 2,
+                  "unit": "ml"
+                },
+                {
+                  "id": 66,
+                  "name": "Poivre moulu",
+                  "quantity": 3,
+                  "position": 4,
+                  "unit": "g"
+                },
+                {
+                  "id": 67,
+                  "name": "Zeste de citron vert",
+                  "quantity": 2,
+                  "position": 5,
+                  "unit": "g"
+                },
+                {
+                  "id": 68,
+                  "name": "Ail frais",
+                  "quantity": 5,
+                  "position": 6,
+                  "unit": "g"
+                },
+                {
+                  "id": 69,
+                  "name": "Piment fort",
+                  "quantity": 1,
+                  "position": 7,
+                  "unit": "g"
+                }
+              ],
+              "steps": [
+                {
+                  "id": 49,
+                  "body": "Couper la bavette en fines tranches d'environ 2mm",
+                  "position": 1
+                },
+                {
+                  "id": 50,
+                  "body": "Dans un sac culinaire déposer tous les ingrédients.",
+                  "position": 2
+                },
+                {
+                  "id": 51,
+                  "body": "Laissez macérer pendant 24h au frigo.",
+                  "position": 3
+                },
+                {
+                  "id": 52,
+                  "body": "Sortez les morceaux de boeuf et placer sur une grille allant au déshydrateur (ou pour d'autres options voir notes).  Séchez pendant 4h à 7h en vérifiant si la consistance vous plait.",
+                  "position": 4
+                }
+              ]
+            }
+          },
+          {
+            "recipe": {
+              "id": 15,
+              "name": "Foie gras de canard en terrine",
+              "notes": "Vous pouvez faire votre propre mélange de "4 épices" par 20g de poivre, 6g de girofle en poudre, 6g de gingembre en poudre et 6g de cannelle en poudre pour substituer.  Vous pouvez aussi rajouter de la muscade moulue à la microplane pour encore plus de complexité des saveurs. \n\nJe recommande fortement la vidéo du Chef Michel Dumas sur Facebook.  Il a quelques trucs incroyables pour sa terrine de foie gras.",
+              "language": "fr",
+              "ingredients": [
+                {
+                  "id": 70,
+                  "name": "Un foie gras de canard",
+                  "quantity": 800,
+                  "position": 1,
+                  "unit": "g"
+                },
+                {
+                  "id": 72,
+                  "name": "4 épices (voir notes)",
+                  "quantity": 4,
+                  "position": 4,
+                  "unit": "g"
+                },
+                {
+                  "id": 71,
+                  "name": "Sel",
+                  "quantity": 10,
+                  "position": 6,
+                  "unit": "g"
+                }
+              ],
+              "steps": [
+                {
+                  "id": 53,
+                  "body": "Préchauffez le four à 95C/200F.  Posez y un plat plus grand que votre terrine avec de l'eau pour y faire un bain marie.",
+                  "position": 1
+                },
+                {
+                  "id": 54,
+                  "body": "Séparez avec les main le gros lobe du petit lobe.",
+                  "position": 2
+                },
+                {
+                  "id": 55,
+                  "body": "Avec le manche d'une cuillère gratter et tirer le long des "veines" pour la retirer des deux lobes.  N'hésitez pas à ouvrir comme un livre les lobes pour bien en extraire les veines.  Elles se recollent facilement après.",
+                  "position": 3
+                },
+                {
+                  "id": 56,
+                  "body": "Arrosez le foie gras de votre alcool et saupoudrez du sel et des épices.",
+                  "position": 4
+                },
+                {
+                  "id": 57,
+                  "body": "Dans votre terrine déposer du papier parchemin au fond pour en faciliter l'extraction avec deux bandelettes qui dépassent. Déposez le foie dans votre terrine en prenant soin de mettre les plus petit morceaux en dessous et le plus gros lobe au dessus.",
+                  "position": 5
+                },
+                {
+                  "id": 58,
+                  "body": "Placer dans le bain marie au four et sortez dès que la cuisson au coeur atteint 44C/112F.  Environ 40 minutes.",
+                  "position": 6
+                },
+                {
+                  "id": 59,
+                  "body": "Retirez le surplus de graisse en en gardant assez pour que le foie gras soit enrobé du gras.",
+                  "position": 7
+                },
+                {
+                  "id": 60,
+                  "body": "Placer au frigo 24h.",
+                  "position": 8
+                },
+                {
+                  "id": 61,
+                  "body": "Tranchez avec un couteau chaud et servez.",
+                  "position": 9
+                }
+              ]
+            }
+          }
+        ]
         {
           "id": 61,
           "name": "Huile neutre",
