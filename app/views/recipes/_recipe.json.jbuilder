@@ -7,4 +7,6 @@ json.recipe do
   json.ingredients recipe.ingredients, :id, :name, :quantity, :position, :unit
 
   json.steps recipe.steps, :id, :body, :position
+
+  json.techniques recipe.techniques, :id, :name
 end

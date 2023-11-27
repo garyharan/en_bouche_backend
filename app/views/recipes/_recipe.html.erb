@@ -3,6 +3,14 @@
     <%= recipe.name %>
   </h1>
 
+  <div class="p-3 flex">
+    <% recipe.techniques.each do |technique| %>
+      <div class="rounded-full shadow mr-2 px-2 text-xs bg-yellow-100">
+        <%= technique.name %>
+      </div>
+    <% end %>
+  </div>
+
   <div class="flex flex-row items-center border-b-2 p-3 pb-2">
     <div class="grow-0">
       <ul class="pr-4">

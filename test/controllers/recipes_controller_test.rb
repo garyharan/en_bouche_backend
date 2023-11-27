@@ -25,7 +25,7 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to recipe_url(Recipe.last)
   end
 
-  test "should create recipe with ingredients and steps" do
+  test "should create recipe with ingredients, steps and techniques" do
     assert_difference("Recipe.count", 1) do
       assert_difference("Ingredient.count", 2) do
         post recipes_url, params: {
@@ -39,6 +39,7 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
               "0" => { body: "Cut pear" },
               "1" => { body: "Eat pear" }
             },
+            technique_ids: [techniques(:one).id],
             notes: "Cut pear... eat pair",
             language: "en"
           }
@@ -50,6 +51,8 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
 
     assert Recipe.last.steps.first.body == "Cut pear"
     assert Recipe.last.steps.last.body == "Eat pear"
+
+    assert Recipe.last.techniques.first.name == "Salaison"
   end
 
   test "should show recipe" do

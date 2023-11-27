@@ -101,9 +101,19 @@
     <%= form.text_area :notes, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
   </div>
 
+  <%= form.hidden_field :language, value: 'fr' %>
+
   <div class="mb-4">
-    <%= form.label :language, class: "block text-gray-700 font-bold mb-2" %>
-    <%= form.select :language, Recipe::LANGUAGES, {}, { class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" } %>
+    <ul>
+      <%= form.collection_check_boxes(:technique_ids, Technique.all, :id, :name) do |b| %>
+        <li>
+          <label class="your-label-class">
+            <%= b.check_box(class: "mx-4") %>
+            <%= b.label %>
+          </label>
+        </li>
+      <% end %>
+    </ul>
   </div>
 
   <div class="flex items-center justify-between">

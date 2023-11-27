@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @technique %>
+
+<div>
+  <%= link_to "Edit this technique", edit_technique_path(@technique) %> |
+  <%= link_to "Back to techniques", techniques_path %>
+
+  <%= button_to "Destroy this technique", @technique, method: :delete %>
+</div>

@@ -84,7 +84,8 @@ end
           :body,
           :position,
           :_destroy
-        ]
+        ],
+        technique_ids: []
       )
     end
 end
