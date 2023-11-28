@@ -11,6 +11,14 @@
     <% end %>
   </div>
 
+  <div class="p-3 flex">
+    <% (recipe.difficulty || 1).times do  %>
+      <div class="mr-2">
+        ⚡
+      </div>
+    <% end %>
+  </div>
+
   <div class="flex flex-row items-center border-b-2 p-3 pb-2">
     <div class="grow-0">
       <ul class="pr-4">

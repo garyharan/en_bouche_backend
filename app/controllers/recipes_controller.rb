@@ -70,6 +70,7 @@ end
       params.require(:recipe).permit(
         :name,
         :notes,
+        :difficulty,
         :language,
         ingredients_attributes: [
           :id,

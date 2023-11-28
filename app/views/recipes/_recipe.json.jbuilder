@@ -2,6 +2,7 @@ json.recipe do
   json.id recipe.id
   json.name recipe.name.gsub('"', "'")
   json.notes recipe.notes.gsub('"', "'")
+  json.difficulty recipe.difficulty
   json.language recipe.language
 
   json.ingredients recipe.ingredients do |ingredient|

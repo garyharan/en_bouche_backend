@@ -41,6 +41,7 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
             },
             technique_ids: [techniques(:one).id],
             notes: "Cut pear... eat pair",
+            difficulty: 1,
             language: "en"
           }
         }
@@ -53,6 +54,9 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
     assert Recipe.last.steps.last.body == "Eat pear"
 
     assert Recipe.last.techniques.first.name == "Salaison"
+
+    assert Recipe.last.techniques.difficult == 1
+    assert Recipe.last.techniques.language == "en"
   end
 
   test "should show recipe" do

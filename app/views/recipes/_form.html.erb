@@ -101,6 +101,10 @@
     <%= form.text_area :notes, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
   </div>
 
+  <div class="mb-4">
+    <%= form.label :difficulty, class: "block text-gray-700 font-bold mb-2" %>
+    <%= form.select :difficulty, options_for_select([['⚡', 1], ['⚡⚡', 2], ['⚡⚡⚡', 3]], recipe.difficulty), {}, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+
   <%= form.hidden_field :language, value: 'fr' %>
 
   <div class="mb-4">

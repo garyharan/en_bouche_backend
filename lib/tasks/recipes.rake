@@ -6,5 +6,9 @@ namespace :recipes do
     File.open("cache/recipes.json", "w") do |f|
       f.write URI.open("http://localhost:3000/recipes.json").read
     end
+
+    File.open("cache/techniques.json", "w") do |f|
+      f.write URI.open("http://localhost:3000/techniques.json").read
+    end
   end
 end
