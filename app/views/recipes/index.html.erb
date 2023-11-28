@@ -14,7 +14,13 @@
     <p class="p-5">No recipes yet.</p>
   <% end %>
 
+  <% difficulty = 0 %>
   <% @recipes.each do |recipe| %>
+    <% if recipe.difficulty != difficulty %>
+      <% difficulty = recipe.difficulty %>
+      <h2 class="text-2xl font-bold mb-4 mt-10 text-center rounded-full bg-slate-100"><%= ["Facile", "Intermediaire", "Difficile"][difficulty - 1] %></h2>
+    <% end %>
+
     <%= link_to recipe, class: "block rounded hover:shadow p-2" do %>
       <div class="flex items-center">
         <div class="flex-grow">
