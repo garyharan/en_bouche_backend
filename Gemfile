@@ -12,6 +12,10 @@ gem "sprockets-rails"
 gem "sqlite3", "~> 1.4"
 gem 'acts_as_list'
 
+# Search capabilities as per: https://github.com/ankane/searchkick#getting-started
+gem "searchkick"
+gem "opensearch-ruby"
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
